@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#0039b3">
+	
+	@* iOS support *@
+	<meta name="apple-mobile-web-app-status-bar" content="#0039b3">
+
+	<title>@ViewData["Title"]</title>
+	<link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico">
+
+	@* Bootstrap *@
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+	@* Datatables *@
+	<link rel="stylesheet" type="text/css" href="~/lib/datatables/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" type="text/css" href="~/lib/fixedheader/css/fixedHeader.bootstrap5.min.css">
+	@* <link rel="stylesheet" type="text/css" href="~/lib/autofill/css/autoFill.bootstrap5.css"> *@
+	<link rel="stylesheet" type="text/css" href="~/lib/buttons/css/buttons.bootstrap5.min.css">
+	@* <link rel="stylesheet" type="text/css" href="~/lib/colreorder/css/colReorder.bootstrap5.min.css"> *@
+	<link rel="stylesheet" type="text/css" href="~/lib/datetime/css/dataTables.dateTime.min.css">
+	<link rel="stylesheet" type="text/css" href="~/lib/responsive/css/responsive.bootstrap5.min.css">
+	<link rel="stylesheet" type="text/css" href="~/lib/rowgroup/css/rowGroup.bootstrap5.min.css">
+	<link rel="stylesheet" type="text/css" href="~/lib/rowreorder/css/rowReorder.bootstrap5.min.css">
+	<link rel="stylesheet" type="text/css" href="~/lib/searchbuilder/css/searchBuilder.bootstrap5.min.css">
+	@* <link rel="stylesheet" type="text/css" href="~/lib/searchpanes/css/searchPanes.bootstrap5.min.css"> *@
+	@* <link rel="stylesheet" type="text/css" href="~/lib/select/css/select.bootstrap5.min.css"> *@
+	
+	@* Fontawesome *@
+	<link rel="stylesheet" type="text/css" href="~/lib/fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="~/lib/fontawesome/css/fontawesome.min.css">
+
+	@* SweetAlert *@
+	<link rel="stylesheet" type="text/css" href="~/lib/sweetalert2/css/sweetalert2.min.css">
+	
+	@* Pace Themes *@
+	<link rel="stylesheet" type="text/css" href="~/lib/pace/pace-theme-default.min.css">
+	<link rel="stylesheet" type="text/css" href="~/lib/pace/themes/blue/pace-theme-minimal.css">
+
+	@* Own Styles and fonts *@
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+
+	<!-- Google Charts -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body class="app sidebar-mini">
+	@* Rendering View *@
+	@RenderBody()
+
+	@* Toast *@
+	<partial name="Includes/_Toast.cshtml"/>
+
+	@* JS Libraries *@
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/js/toast.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

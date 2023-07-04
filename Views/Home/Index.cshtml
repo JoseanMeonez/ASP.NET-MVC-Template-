@@ -1,0 +1,42 @@
+﻿@* @{
+	ViewData["Title"] = "Menú";
+	ViewData["Desc"] = "Menú Principal";
+	ViewData["Icon"] = "fa-solid fa-house-chimney";
+	ViewData["Breadcrumb"] = "Inicio";
+} *@
+
+@* Rendering Navbar and Sidebar *@
+<partial name="../Shared/Includes/_Navbar.cshtml" />
+<partial name="../Shared/Includes/_Sidebar.cshtml" />
+<br>
+
+<!-- Main -->
+<main class="app-content">
+	<div class="app-title">
+		<div>
+			<h1>
+				<i class='breadcrumb-item__icon @ViewData["Icon"] fa-lg'></i>
+				<span>@ViewData["Title"]</span>
+			</h1>
+			<p>@ViewData["Desc"]</p>
+		</div>
+		<ul class="app-breadcrumb breadcrumb">
+			<li class="breadcrumb-item">
+				<i class='breadcrumb-item__icon @ViewData["Icon"] fa-xl'></i>
+				<a>@ViewData["Breadcrumb"]</a>
+			</li>
+		</ul>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="tile">
+				<div class="tile-body"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+@* <?= 
+	component('footer', $data);
+	getToasts();
+?> *@
